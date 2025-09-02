@@ -1,12 +1,35 @@
-// Removed offcanvas class manipulation to ensure it always slides from the start (left)
-// The offcanvas-start class is already set in the HTML.
-// No need for this function if offcanvas-start is desired for all screen sizes.
-// function setOffcanvasClass() {
-//     const offcanvas = document.getElementById('offcanvasNavbar');
-//     // Ensure offcanvas-start is always present and offcanvas-top is removed
-//     offcanvas.classList.remove('offcanvas-top');
-//     offcanvas.classList.add('offcanvas-start');
-// }
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinksContainer = document.getElementById('offcanvas-nav-links');
+    if (navLinksContainer) {
+        const pages = [
+            { name: 'Home', file: 'index.html' },
+            { name: 'About Us', file: 'about-us.html' },
+            { name: 'Booking', file: 'booking.html' },
+            { name: 'Contact', file: 'contact.html' },
+            { name: 'Deals', file: 'deals.html' },
+            { name: 'Events', file: 'events.html' },
+            { name: 'Gallery', file: 'gallery.html' },
+            { name: 'Games', file: 'games.html' },
+            { name: 'News', file: 'news.html' },
+            { name: 'PC Specs', file: 'pc-specs.html' },
+            { name: 'Prices', file: 'prices.html' }
+        ];
 
-// window.addEventListener('resize', setOffcanvasClass);
-// window.addEventListener('DOMContentLoaded', setOffcanvasClass);
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+        pages.forEach(page => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('nav-item');
+            const link = document.createElement('a');
+            link.classList.add('nav-link');
+            link.href = page.file;
+            link.textContent = page.name;
+
+            if (currentPage === page.file) {
+                listItem.classList.add('active-page');
+            }
+            listItem.appendChild(link);
+            navLinksContainer.appendChild(listItem);
+        });
+    }
+});

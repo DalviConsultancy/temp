@@ -185,7 +185,7 @@ h6 {
 }
 
 .bg-dark-gradient {
-    background: url('../images/section_gaming_library.png') no-repeat center center/cover;
+    background: url('../images/prices_console_gaming_zone.png') no-repeat center center/cover;
     background-attachment: fixed;
     position: relative;
     padding: 4rem 0;
@@ -203,7 +203,7 @@ h6 {
 }
 
 .bg-about-section {
-    background: url('../images/logo_playverse.png') no-repeat center center/cover;
+    background: url('../images/logo_playverse_main.png') no-repeat center center/cover;
     background-attachment: fixed;
     position: relative;
     padding: 4rem 0;
@@ -474,7 +474,11 @@ footer p, footer .text-muted.small, footer .social-icons a {
         align-items: center;
     }
     .offcanvas-start {
-        width: 250px;
+        width: fit-content;
+        min-width: 200px;
+    }
+    .offcanvas-body {
+        padding-right: 3rem;
     }
     .main-content-flex-grow {
         padding-top: 70px;

@@ -142,18 +142,17 @@
         <div class="container" style="position: relative; z-index: 2;">
             <h2 class="section-title">Contact Playverse</h2>
             <div class="row justify-content-center text-center">
-                <div class="col-md-4 mb-4">
+               <div class="col-md-4 mb-4">
                     <div class="card h-100 p-3">
-                        <h5 class="card-title">Address</h5>
-                        <p class="card-text">123 Gaming Lane, Cyber City, GA 30303</p>
+                        <h5 class="card-title">Customer Care</h5>
+                        <p class="card-text">+91 8799906798</p>
+                        <p class="card-text">+91 8898630507</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 p-3">
-                        <h5 class="card-title">Customer Care</h5>
-                        <p class="card-text">+1 (555) 123-4567</p>
-                        <p class="card-text">+1 (555) 987-6543</p>
-                        <p class="card-text">+1 (555) 555-1212</p>
+                        <h5 class="card-title">Address</h5>
+                        <p class="card-text">2nd floor, R6 commercial township centre, Life Republic Township, 203, Tathawade, Pimpri-Chinchwad, Pune, Maharashtra 411057</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -181,40 +180,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/stats-animation.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navLinksContainer = document.getElementById('offcanvas-nav-links');
-            const pages = [
-                { name: 'Home', file: 'index.html' },
-                { name: 'About Us', file: 'about-us.html' },
-                { name: 'Booking', file: 'booking.html' },
-                { name: 'Contact', file: 'contact.html' },
-                { name: 'Deals', file: 'deals.html' },
-                { name: 'Events', file: 'events.html' },
-                { name: 'Gallery', file: 'gallery.html' },
-                { name: 'Games', file: 'games.html' },
-                { name: 'News', file: 'news.html' },
-                { name: 'PC Specs', file: 'pc-specs.html' },
-                { name: 'Prices', file: 'prices.html' }
-            ];
-
-            const currentPage = window.location.pathname.split('/').pop();
-
-            pages.forEach(page => {
-                const listItem = document.createElement('li');
-                listItem.classList.add('nav-item');
-                const link = document.createElement('a');
-                link.classList.add('nav-link');
-                link.href = page.file;
-                link.textContent = page.name;
-
-                if (currentPage === page.file) {
-                    listItem.classList.add('active-page');
-                }
-                listItem.appendChild(link);
-                navLinksContainer.appendChild(listItem);
-            });
-        });
-    </script>
+    
 </body>
 </html>
