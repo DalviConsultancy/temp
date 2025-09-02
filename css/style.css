@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+html {
+    background-color: #000000;
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 0px; /* Removed padding to eliminate purple line */
+    display: flex; /* Added for Flexbox */
+    flex-direction: column; /* Added for Flexbox */
+    min-height: 100vh; /* Added for Flexbox */
+}
+
+.navbar {
+    background-color: #000000 !important; /* Full black */
+    backdrop-filter: blur(10px); /* Keep if desired, but might be less effective with solid background */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+    z-index: 1030; /* Ensure navbar is above other content */
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    color: #f0f0f0 !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #00f0ff !important;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.hero-section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('../images/hero_homepage_main.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark tint */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 18px #00f0ff;
+}
+
+h1, h5 {
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.hero-content p {
+    color: #c0c0c0;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background: #00f0ff;
+    border: none;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #302b63;
+    color: #ffffff;
+    box-shadow: 0 0 20px #00f0ff;
+    transform: translateY(-3px);
+}
+
+.form-label {
+    color: #00f0ff;
+    font-weight: 700;
+}
+
+.form-control, .form-select {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #00f0ff;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    border-color: #00f0ff;
+}
+
+.form-control::placeholder {
+    color: #bbb;
+}
+
+input, textarea {
+    color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    color: #ffffff;
+}
+
+.card-text {
+    color: #ffffff;
+}
+
+.card p.lead {
+    color: #ffffff;
+}
+
+.card h3 {
+    color: #FFD700; /* Golden color */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #a0a0a0 !important;
+}
+
+small {
+    color: #a0a0a0 !important;
+}
+
+h6 {
+    color: #ffffff !important;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.bg-dark-gradient {
+    background: url('../images/section_gaming_library.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.bg-dark-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7); /* Dark tint */
+    z-index: 1;
+}
+
+.bg-about-section {
+    background: url('../images/logo_playverse.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.bg-about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7); /* Dark tint */
+    z-index: 1;
+}
+
+.parallax-about-image {
+    height: 300px; /* Adjust height as needed */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-content {
+    background: rgba(15, 12, 41, 0.9); /* Dark background with transparency */
+    border: 1px solid #00f0ff;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+}
+
+.modal-header {
+    border-bottom: 1px solid #00f0ff;
+}
+
+.modal-title {
+    color: #00f0ff;
+    text-shadow: 0 0 8px #00f0ff;
+}
+
+.btn-close {
+    filter: invert(1) brightness(2); /* Make close button white/neon */
+}
+
+.modal-body h5 {
+    color: #FFD700; /* Golden for event titles in modal */
+    text-shadow: none;
+}
+
+.modal-body p {
+    color: #e0e0e0;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: #00f0ff;
+    color: #00f0ff;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #00f0ff;
+    color: #ffffff;
+    box-shadow: 0 0 15px #00f0ff;
+}
+
+footer {
+    border-top: 1px solid rgba(0, 240, 255, 0.2);
+    padding: 2rem 0;
+    background: #333333; /* Grey background */
+    text-align: center;
+}
+
+footer p, footer .text-muted.small, footer .social-icons a {
+    color: #ffffff !important;
+}
+
+.event-details-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #ffffff;
+}
+
+.event-details-title {
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+    margin-bottom: 1rem;
+}
+
+.event-details-description {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.calendar-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Revert to original border */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.calendar-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.calendar-weekdays, .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    color: #00f0ff;
+}
+
+.calendar-days div {
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.calendar-days div:hover {
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.calendar-days div.current-day {
+    background: #00f0ff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.calendar-days div.has-event {
+    border: 2px solid #00f0ff; /* Blue border for events */
+    position: relative;
+}
+
+.calendar-days div.has-event::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #FFD700;
+    border-radius: 50%;
+}
+
+.btn-outline-info {
+    color: #00f0ff;
+    border-color: #00f0ff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-info:hover {
+    background-color: #00f0ff;
+    color: #ffffff;
+}
+
+
+.cta-button {
+    background: #00f0ff;
+    border: none;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #302b63;
+    color: #ffffff;
+    box-shadow: 0 0 20px #00f0ff;
+    transform: translateY(-3px);
+}
+
+.social-icons a {
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #00f0ff;
+    transform: scale(1.2);
+}
+
+.main-content-flex-grow {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .card h3 {
+        font-size: 2rem;
+    }
+    .calendar-header h3 {
+        font-size: 1.5rem;
+    }
+    .calendar-days div {
+        padding: 8px;
+    }
+    .social-icons a {
+        margin: 0 8px;
+    }
+    .footer {
+        padding: 1.5rem 0;
+    }
+    .navbar-brand span {
+        display: none;
+    }
+    .navbar-brand img {
+        height: 50px;
+    }
+    .navbar-brand-centered {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .navbar-toggler {
+        left: 15px;
+    }
+    .d-lg-block {
+        display: none !important;
+    }
+    .offcanvas-body .navbar-nav {
+        align-items: center;
+    }
+    .offcanvas-start {
+        width: 250px;
+    }
+    .main-content-flex-grow {
+        padding-top: 70px;
+    }
+    .hero-section {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991.98px) {
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+}

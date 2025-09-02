@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Playverse - Gallery</title>
+    <link rel="icon" href="images/logo_playverse_main.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=1.4">
+    <link rel="stylesheet" href="css/custom.css?v=1.9">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="offcanvas-nav-links">
+                <!-- Links will be dynamically inserted here -->
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+            <!-- Hamburger button for Offcanvas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Logo and Site Name (centered on mobile, left on desktop) -->
+            <a class="navbar-brand navbar-brand-centered" href="index.html"><img src="images/logo_playverse_main.png" alt="Playverse Logo" height="60" loading="lazy"> <span style="color: #FF9068;">Play</span><span style="color: #8CE3FF;">verse</span> <span style="color: white;">Gaming</span></a>
+
+            <!-- Main Navbar links (visible on desktop, right-aligned) -->
+            <div class="d-none d-lg-block"> <!-- Hide on small screens -->
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item me-3"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="booking.html">Booking</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="prices.html">Prices</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <div class="main-content-flex-grow">
+    <header class="py-5 text-center">
+        <div class="container">
+            <h1 class="display-4">Our Gallery</h1>
+            <p class="lead">Take a visual tour of Playverse.</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Our Spaces</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/section_homepage_pro_gear.png" class="card-img-top" alt="PC Gaming Area" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">High-Performance PC Gaming</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/prices_console_gaming_zone.png" class="card-img-top" alt="Console Gaming Area" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Comfortable Console Zones</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/service_private_gaming_booth.png" class="card-img-top" alt="Private Gaming Booth" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Exclusive Private Booths</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/about_us_lounge_area.jpg" class="card-img-top" alt="Lounge Area" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Relaxing Lounge Area</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/event_valorant_tournament.png" class="card-img-top" alt="Tournament Setup" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tournament Ready Setups</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="images/section_homepage_gaming_library.png" class="card-img-top" alt="Gaming Community" loading="lazy">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Vibrant Community Events</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2025 Playverse. All rights reserved.</p>
+        <div class="social-icons mt-3">
+            <a href="https://www.instagram.com/" class="text-white mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.youtube.com/" class="text-white mx-2"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="https://discord.com/" class="text-white mx-2"><i class="fab fa-discord fa-2x"></i></a>
+        </div>
+        <p class="text-muted small mt-3">Made by Ishaan Dalvi</p>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js?v=1.1"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinksContainer = document.getElementById('offcanvas-nav-links');
+            const pages = [
+                { name: 'Home', file: 'index.html' },
+                { name: 'About Us', file: 'about-us.html' },
+                { name: 'Booking', file: 'booking.html' },
+                { name: 'Contact', file: 'contact.html' },
+                { name: 'Deals', file: 'deals.html' },
+                { name: 'Events', file: 'events.html' },
+                { name: 'Gallery', file: 'gallery.html' },
+                { name: 'Games', file: 'games.html' },
+                { name: 'News', file: 'news.html' },
+                { name: 'PC Specs', file: 'pc-specs.html' },
+                { name: 'Prices', file: 'prices.html' }
+            ];
+
+            const currentPage = window.location.pathname.split('/').pop();
+
+            pages.forEach(page => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('nav-item');
+                const link = document.createElement('a');
+                link.classList.add('nav-link');
+                link.href = page.file;
+                link.textContent = page.name;
+
+                if (currentPage === page.file) {
+                    listItem.classList.add('active-page');
+                }
+                listItem.appendChild(link);
+                navLinksContainer.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    color: #f0f0f0 !important;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #00f0ff !important;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+header.py-5 {
+    background: transparent;
+    text-align: center;
+    padding: 6rem 0 !important;
+}
+
+header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 15px #00f0ff, 0 0 25px #00f0ff;
+}
+
+header .lead {
+    color: #a0a0a0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section.py-5 {
+    background: transparent;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.form-label {
+    color: #00f0ff;
+    font-weight: 700;
+}
+
+.form-control, .form-select {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #00f0ff;
+    color: #ffffff;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    border-color: #00f0ff;
+}
+
+.form-control::placeholder {
+    color: #eee;
+}
+
+.btn-primary {
+    background: #00f0ff;
+    border: none;
+    color: #f0f0f0;
+    padding: 12px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #1a1a1a;
+    box-shadow: 0 0 20px #00f0ff;
+    transform: translateY(-3px);
+}
+
+.clock-container {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    position: relative;
+    user-select: none;
+}
+
+.clock-face {
+    fill: rgba(0, 240, 255, 0.1);
+    stroke: #00f0ff;
+    stroke-width: 2;
+}
+
+.hour-mark, .minute-mark {
+    stroke: #00f0ff;
+}
+
+.hour-mark { stroke-width: 2; }
+.minute-mark { stroke-width: 1; }
+
+.time-marker {
+    fill: #00f0ff;
+    stroke: #fff;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: fill 0.2s;
+}
+
+.time-marker:hover {
+    fill: #fff;
+}
+
+.center-dot {
+    fill: #00f0ff;
+}
+
+.highlight-arc {
+    fill: rgba(0, 240, 255, 0.3);
+    stroke: #00f0ff;
+    stroke-width: 20;
+    pointer-events: none;
+    stroke-opacity: 0.5;
+}
+
+.time-display {
+    text-align: center;
+    margin-top: 15px;
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    color: #00f0ff;
+    text-shadow: 0 0 8px #00f0ff;
+}
+
+#duration {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+footer {
+    border-top: 1px solid rgba(0, 240, 255, 0.2);
+    padding: 2rem 0;
+    background: #333333; /* Grey background */
+}
+
+footer p, footer .text-muted.small, footer .social-icons a {
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 1.5rem;
+    }
+    .clock-container {
+        width: 250px;
+        height: 250px;
+    }
+}
