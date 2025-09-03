@@ -457,10 +457,10 @@ footer p, footer .text-muted.small, footer .social-icons a {
         padding-right: 15px;
     }
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.2rem; /* Increased from 2rem */
     }
     .hero-content p {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Increased from 0.9rem */
     }
     .section-title {
         font-size: 1.8rem;
@@ -510,10 +510,10 @@ footer p, footer .text-muted.small, footer .social-icons a {
 
 @media (max-width: 576px) {
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem; /* Increased from 1.8rem */
     }
     .hero-content p {
-        font-size: 0.8rem;
+        font-size: 0.9rem; /* Increased from 0.8rem */
     }
     .section-title {
         font-size: 1.5rem;
