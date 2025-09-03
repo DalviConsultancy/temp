@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const radius = 140;
     let activeMarker = null;
 
-    let startAngle = 270; // 9:00 AM
-    let endAngle = 300;  // 10:00 AM
+    let startAngle = 0; // 12:00 PM
+    let endAngle = 30;  // 1:00 PM
 
     function getAngleFromEvent(event) {
         const svgRect = clock.getBoundingClientRect();
@@ -28,28 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function angleToTime(angle) {
-        const totalMinutes = (angle / 360) * 12 * 60;
-        let hours = Math.floor(totalMinutes / 60);
-        const minutes = Math.round(totalMinutes % 60);
+        const totalMinutes = Math.round((angle / 360) * 12 * 60);
+        let hours = 12 + Math.floor(totalMinutes / 60);
+        let minutes = totalMinutes % 60;
 
-        // Determine AM/PM based on the flipped logic
-        const ampm = (angle >= 180 && angle < 360) ? 'AM' : 'PM';
-
-        // Adjust hours for 12-hour format
-        let displayHours = hours % 12;
-        if (displayHours === 0) displayHours = 12; // 0 becomes 12
-
-        // Handle special cases for 12 AM and 12 PM based on flipped logic
-        // 12 PM is at 0/360 degrees
-        if ((angle >= 352.5 || angle < 7.5) && ampm === 'PM') { // Around 12 PM (top)
-            return `12:${minutes.toString().padStart(2, '0')} PM`;
-        }
-        // 12 AM is at 180 degrees
-        if (Math.abs(angle - 180) < 7.5 && ampm === 'AM') { // Around 12 AM (bottom)
-            return `12:${minutes.toString().padStart(2, '0')} AM`;
+        if (minutes < 10) {
+            minutes = '0' + minutes;
         }
 
-        return `${displayHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+        if (hours === 12) {
+            return `12:${minutes} PM`;
+        }
+        if (hours === 24) {
+            return `12:${minutes} AM`;
+        }
+        if (hours > 12 && hours < 24) {
+            return `${hours - 12}:${minutes} PM`;
+        }
+        // This case should ideally not be reached in a 12 PM to 12 AM clock
+        return `${hours}:${minutes} AM`;
     }
 
     function updateClock() {
@@ -87,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timeDisplay.textContent = `${startTime} - ${endTime}`;
         hiddenTimeInput.value = `${startTime} - ${endTime}`;
 
-        let duration = (endAngle - drawStartAngle + 360) % 360;
+        let duration = (endAngle - startAngle + 360) % 360;
         const durationHours = duration / 30; // 30 degrees per hour
         durationInput.value = durationHours.toFixed(2);
     }
@@ -97,13 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const minuteMarksGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         minuteMarksGroup.classList.add('minute-marks');
 
-        const minuteMarkLength = 8;
         const hourMarkLength = 15;
 
-        for (let i = 0; i < 60; i++) {
-            const angle = (i / 60) * 360;
-            const isHourMark = i % 5 === 0;
-            const length = isHourMark ? hourMarkLength : minuteMarkLength;
+        for (let i = 0; i < 12; i++) {
+            const angle = i * 30;
+            const length = hourMarkLength;
 
             const x1 = centerX + (radius - length) * Math.cos((angle - 90) * Math.PI / 180);
             const y1 = centerY + (radius - length) * Math.sin((angle - 90) * Math.PI / 180);
@@ -116,8 +111,23 @@ document.addEventListener('DOMContentLoaded', () => {
             line.setAttribute('x2', x2);
             line.setAttribute('y2', y2);
             line.setAttribute('stroke', '#00f0ff');
-            line.setAttribute('stroke-width', isHourMark ? '2' : '1');
+            line.setAttribute('stroke-width', '2');
             minuteMarksGroup.appendChild(line);
+
+            const textX = centerX + (radius - length - 15) * Math.cos((angle - 90) * Math.PI / 180);
+            const textY = centerY + (radius - length - 15) * Math.sin((angle - 90) * Math.PI / 180);
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('x', textX);
+            text.setAttribute('y', textY);
+            text.setAttribute('fill', '#fff');
+            text.setAttribute('text-anchor', 'middle');
+            text.setAttribute('dominant-baseline', 'central');
+            let hour = i + 12;
+            if (hour > 12) hour -=12;
+            if(hour === 0) hour = 12;
+            if(i === 0) hour = 12;
+            text.textContent = hour;
+            minuteMarksGroup.appendChild(text);
         }
         clock.appendChild(minuteMarksGroup);
     }
