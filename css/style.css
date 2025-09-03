@@ -425,74 +425,104 @@ footer p, footer .text-muted.small, footer .social-icons a {
     flex-grow: 1;
 }
 
-@media (max-width: 768px) {
-    .hero-content {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+@media (max-width: 991.98px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    .hero-content p {
-        font-size: 1rem;
-    }
     .section-title {
-        font-size: 2rem;
-    }
-    .card h3 {
-        font-size: 2rem;
-    }
-    .calendar-header h3 {
-        font-size: 1.5rem;
-    }
-    .calendar-days div {
-        padding: 8px;
-    }
-    .social-icons a {
-        margin: 0 8px;
-    }
-    .footer {
-        padding: 1.5rem 0;
-    }
-    .navbar-brand span {
-        display: none;
-    }
-    .navbar-brand img {
-        height: 50px;
+        font-size: 2.2rem;
     }
     .navbar-brand-centered {
         left: 50%;
         transform: translateX(-50%);
     }
     .navbar-toggler {
-        left: 15px;
+        display: block;
     }
     .d-lg-block {
         display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: clamp(0.9rem, 1.2vw + 0.4rem, 1.1rem);
+    }
+    .hero-section {
+        height: 60vh;
+        background-attachment: scroll;
+    }
+    .hero-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .card {
+        padding: 1.5rem;
+    }
+    .card h3 {
+        font-size: 1.8rem;
+    }
+    .calendar-header h3 {
+        font-size: 1.3rem;
+    }
+    .calendar-days div {
+        padding: 6px;
+    }
+    .social-icons a {
+        margin: 0 5px;
+    }
+    footer {
+        padding: 1rem 0;
+    }
+    .navbar-brand span {
+        display: none;
+    }
+    .navbar-brand img {
+        height: 45px;
     }
     .offcanvas-body .navbar-nav {
         align-items: center;
     }
     .offcanvas-start {
         width: fit-content;
-        min-width: 200px;
+        min-width: 180px;
     }
     .offcanvas-body {
-        padding-right: 3rem;
+        padding-right: 2rem;
     }
     .main-content-flex-grow {
-        padding-top: 70px;
+        padding-top: 60px;
     }
-    .hero-section {
-        height: 70vh;
+    .bg-dark-gradient, .bg-about-section {
+        background-attachment: scroll;
     }
 }
 
-@media (min-width: 769px) and (max-width: 991.98px) {
+@media (max-width: 576px) {
     .hero-content h1 {
-        font-size: 3.5rem;
+        font-size: 1.8rem;
+    }
+    .hero-content p {
+        font-size: 0.8rem;
     }
     .section-title {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .card h3 {
+        font-size: 1.5rem;
+    }
+    .btn-primary, .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
