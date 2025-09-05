@@ -67,7 +67,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('../images/hero_homepage_main.png') no-repeat center center/cover;
+    background: url('../images/hero_homepage_main.avif') no-repeat center center/cover;
     background-attachment: fixed;
     position: relative;
 }
@@ -141,7 +141,7 @@ body {
 }
 
 .bg-about-section {
-    background: url('../images/logo_playverse_main.png') no-repeat center center/cover;
+    background: url('../images/logo_playverse_main.avif') no-repeat center center/cover;
     background-attachment: fixed;
     position: relative;
     padding: 4rem 0;
@@ -159,7 +159,7 @@ body {
 }
 
 .bg-dark-gradient {
-    background: url('../images/prices_console_gaming_zone.png') no-repeat center center/cover;
+    background: url('../images/prices_console_gaming_zone.avif') no-repeat center center/cover;
     background-attachment: fixed;
     position: relative;
     padding: 4rem 0;
